@@ -40,12 +40,11 @@ class UI {
       body: JSON.stringify(dataToSend),
     };
     const response = await fetch(
-      "http://localhost:5500/something",
+      "https://js-server-us.herokuapp.com/something",
       fetchOptions
     );
 
     const data = await response.json();
-
     this.renderData(data);
   }
 
