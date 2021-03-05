@@ -57,11 +57,11 @@ class UI {
 
     //iterate over array
 
-    titleArray.forEach((title) => {
+    titleArray.forEach((title, ind) => {
       const card = document.createElement("div");
       card.classList.add("row");
       card.innerHTML = `
-        <a href= "#>
+        <a href=${hrefArray[ind]} target="_blank">
             <div class="col s12 m6 offset-m3">
                 <div class="card">
                     <div class="card-content">
