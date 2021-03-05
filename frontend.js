@@ -55,6 +55,15 @@ class UI {
     let titleArray = data.titles,
     hrefArray = data.hrefs;
 
+    //removing null links 
+
+    hrefArray.forEach((elem, ind) => {
+      if(elem === null){
+        titleArray.splice(ind, 1)
+        hrefArray.splice(ind, 1)
+      }
+    });
+
     //iterate over array
 
     titleArray.forEach((title, ind) => {
